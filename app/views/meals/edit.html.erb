@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<%= form_for(@meal) do |f| %>
+  <p>
+    <%= f.label       :name %>
+    <%= f.text_field  :name %>
+  </p>
+  <p>
+    <%= f.label       :cost_in_cents %>
+    <%= f.text_field  :cost_in_cents %>
+  </p>
+    <%= f.submit %>
+  
+<% end %>

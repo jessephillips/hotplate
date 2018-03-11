@@ -1,5 +1,13 @@
 class MealsController < ApplicationController
   def index
-    @meals = ['meal 1', 'meal 2', 'meal 3']
+    @meals = Meal.all
+  end
+  
+  def show
+    @meal = Meal.find(params[:id])
+  end
+  
+  def edit
+    @meal = Meal.find(params[:id])
   end
 end
