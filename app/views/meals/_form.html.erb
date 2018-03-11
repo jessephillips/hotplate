@@ -1,0 +1,16 @@
+<%= form_for(@meal) do |f| %>
+  <p>
+    <%= f.label       :name %>
+    <%= f.text_field  :name %>
+  </p>
+  <p>
+    <%= f.label       :cost_in_cents %>
+    <%= f.text_field  :cost_in_cents %>
+  </p>
+  <p>
+    <%= f.label       :servings %>
+    <%= f.text_field  :servings %>
+  </p>
+    <%= f.submit %>
+    <%= link_to "Cancel", meals_path %>
+<% end %>

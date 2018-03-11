@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Meals</h1>
+<h1>Plates</h1>
 
 <table>
   <thead>
@@ -21,6 +21,7 @@
         <td><%= meal.servings %></td>
         <td><%= number_to_currency(meal.cost_per_serving) %></td>
         <td><%= link_to 'Show', meal %></td>
+        <td><%= link_to 'Delete', meal_path(meal), method: :delete, data: {confirm: 'Are you sure?'} %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +29,4 @@
 
 <br>
 
-<%= link_to 'New Restaurant', new_restaurant_path %>
+<%= link_to 'Add a Plate', new_meal_path %>
