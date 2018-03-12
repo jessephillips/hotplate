@@ -11,6 +11,13 @@
     <%= f.label       :servings %>
     <%= f.text_field  :servings %>
   </p>
-    <%= f.submit %>
-    <%= link_to "Cancel", meals_path %>
+  <p>
+    <%= f.label       :image %>
+    <%= f.file_field  :image %>
+  </p>
+  <p style="width: 100px;">
+    <%= image_for(@meal) %>
+  </p>
+  <%= f.submit %>
+  <%= link_to "Cancel", meals_path %>
 <% end %>
