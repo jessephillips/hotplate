@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Restaurant</th>
       <th>Name</th>
       <th>Cost</th>
       <th>Servings</th>
@@ -16,6 +17,13 @@
   <tbody>
     <% @meals.each do |meal| %>
       <tr>
+        <td>
+          <% if meal.restaurant.present? %>
+            <%= link_to meal.restaurant.name, meal.restaurant %>
+          <% else %>
+            <i>none</i>
+          <% end %>
+        </td>
         <td><%= meal.name %></td>
         <td><%= number_to_currency(meal.cost_in_dollars) %></td>
         <td><%= meal.servings %></td>

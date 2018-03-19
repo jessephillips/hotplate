@@ -4,6 +4,9 @@
     <%= f.text_field  :name %>
   </p>
   <p>
+    <%= f.collection_select :restaurant_id, Restaurant.all, :id, :name %>
+  </p>
+  <p>
     <%= f.label       :cost_in_cents %>
     <%= f.text_field  :cost_in_cents %>
   </p>
@@ -15,7 +18,7 @@
     <%= f.label       :image %>
     <%= f.file_field  :image %>
   </p>
-  <p style="width: 100px;">
+  <p class="image-wrapper">
     <%= image_for(@meal) %>
   </p>
   <%= f.submit %>

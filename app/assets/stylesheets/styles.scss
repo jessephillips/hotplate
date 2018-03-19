@@ -5,3 +5,9 @@
 img {
   width: 100%;
 }
+
+.image-wrapper {
+  img {
+    max-width: 100px;
+  }
+}

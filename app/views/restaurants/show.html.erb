@@ -24,6 +24,12 @@
   <strong>Style:</strong>
   <%= @restaurant.style %>
 </p>
+<h2>Meals</h2>
+<% @restaurant.meals.each do |m| %>
+  <p>
+    <%= link_to m.name, m %>  
+  </p>  
+<% end %>
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>
