@@ -2,7 +2,7 @@
 
 <p>
   <strong>Meal:</strong>
-  <%= @review.meal %>
+  <%= @title %>
 </p>
 
 <p>
@@ -15,5 +15,5 @@
   <%= @review.rating %>
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+<%= link_to 'Edit', edit_meal_review_path(@review) %> |
+<%= link_to 'Back', meal_reviews_path %>

@@ -24,4 +24,15 @@
 
 <%= link_to 'Edit', edit_meal_path(@meal) %> |
 <%= link_to 'Back', meals_path %> |
-<%= link_to 'Delete', meal_path(@meal), method: :delete, data: {confirm: 'Are you sure?'} %>
+<%= link_to 'Delete', meal_path(@meal), method: :delete, data: {confirm: 'Are you sure?'} %> |
+<%= link_to 'Review', new_meal_review_path(@meal) %>
+
+<p>
+  <strong>Reviews:</strong>
+</p>
+<% @meal.reviews.each do |r| %>
+  <p>
+    Rating: <%= r.rating %><br/>
+    <%= r.description %>
+  </p>
+<% end %>
