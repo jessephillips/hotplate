@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  root 'meals#index'
   resources :restaurants
-  resources :meals
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :meals do
+    resources :reviews
+  end
+  root 'meals#index'
 end

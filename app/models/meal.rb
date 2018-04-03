@@ -3,6 +3,8 @@ class Meal < ApplicationRecord
 
   belongs_to :restaurant
 
+  has_many :reviews
+
   validates :name,          presence: true
   validates :cost_in_cents, presence: true
   validates_attachment :image,
