@@ -1,0 +1,29 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @meal.name
+%div{:style => "max-width: 25%;"}
+  = image_for(@meal)
+%p
+  %strong Cost:
+  = number_to_currency(@meal.cost_in_dollars)
+%p
+  %strong Servings:
+  = @meal.servings
+%p
+  %strong Cost Per Person:
+  = number_to_currency @meal.cost_per_serving
+= link_to 'Edit', edit_meal_path(@meal)
+|
+= link_to 'Back', meals_path
+|
+= link_to 'Delete', meal_path(@meal), method: :delete, data: {confirm: 'Are you sure?'}
+|
+= link_to 'Review', new_meal_review_path(@meal)
+%p
+  %strong Reviews:
+- @meal.reviews.each do |r|
+  %p
+    Rating: #{r.rating}
+    %br/
+    = r.description

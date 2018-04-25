@@ -34,8 +34,13 @@ gem 'jbuilder', '~> 2.5'
 
 # Use PaperClip to upload photos
 gem 'paperclip', "4.3.2"
-# Use AWS (Amazon Web Services) to hold the uploaded photos
+# Use AWS (Amazon Web Services) to hold the uploaded photoss
 gem 'aws-sdk', '<2.0'
+
+# Use HAML for better views
+gem 'haml'
+# User Haml-rails to make auto-generated views to use haml instead of erb
+gem 'haml-rails', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

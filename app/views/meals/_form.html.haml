@@ -1,0 +1,19 @@
+= form_for(@meal) do |f|
+  %p
+    = f.label       :name
+    = f.text_field  :name
+  %p
+    = f.collection_select :restaurant_id, Restaurant.all, :id, :name
+  %p
+    = f.label       :cost_in_cents
+    = f.text_field  :cost_in_cents
+  %p
+    = f.label       :servings
+    = f.text_field  :servings
+  %p
+    = f.label       :image
+    = f.file_field  :image
+  %p.image-wrapper
+    = image_for(@meal)
+  = f.submit
+  = link_to "Cancel", meals_path

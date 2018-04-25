@@ -1,0 +1,23 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @restaurant.name
+%p
+  %strong Address:
+  = @restaurant.address
+%p
+  %strong Website:
+  = @restaurant.website
+%p
+  %strong Phone:
+  = @restaurant.phone
+%p
+  %strong Style:
+  = @restaurant.style
+%h2 Meals
+- @restaurant.meals.each do |m|
+  %p
+    = link_to m.name, m
+= link_to 'Edit', edit_restaurant_path(@restaurant)
+|
+= link_to 'Back', restaurants_path
